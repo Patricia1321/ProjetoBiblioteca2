@@ -61,21 +61,20 @@ namespace Biblioteca.Models
                 return query.OrderBy(l => l.Titulo).ToList();
             }
         }
-
-        public ICollection<Livro> ListarDisponiveis()
+           public ICollection<Livro> ListarDisponiveis()
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
-                //busca os livros onde o id não está entre os ids de livro em empréstimo
-                // utiliza uma subconsulta
+               
                 return
                     bc.Livros
                     .Where(l =>  !(bc.Emprestimos.Where(e => e.Devolvido == false).Select(e => e.LivroId).Contains(l.Id)) )
                     .ToList();
             }
-        }
-
-        public Livro ObterPorId(int id)
+        }           
+      
+       
+         public Livro ObterPorId(int id)
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
