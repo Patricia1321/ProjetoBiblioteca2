@@ -50,7 +50,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "3.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
+          "lib/netstandard2.1/_._": {}
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -850,11 +850,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pati1\\OneDrive\\Área de Trabalho\\Biblioteca2\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\pati1\\OneDrive\\Área de Trabalho\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "C:\\Users\\pati1\\OneDrive\\Área de Trabalho\\Biblioteca2\\Biblioteca.csproj",
+      "projectPath": "C:\\Users\\pati1\\OneDrive\\Área de Trabalho\\Biblioteca\\Biblioteca.csproj",
       "packagesPath": "C:\\Users\\pati1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pati1\\OneDrive\\Área de Trabalho\\Biblioteca2\\obj\\",
+      "outputPath": "C:\\Users\\pati1\\OneDrive\\Área de Trabalho\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pati1\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -880,6 +880,8 @@
       "netcoreapp3.1": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[3.0.0, )"
           },
